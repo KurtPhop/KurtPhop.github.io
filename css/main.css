@@ -166,3 +166,7 @@ main {
 :root main>*+* {
     margin-top: 1em;
 }
+
+#cvl {
+    display: none;
+}

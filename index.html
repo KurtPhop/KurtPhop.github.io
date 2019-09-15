@@ -6,11 +6,15 @@
     <title>Needful on GitHub</title>
     <link crossorigin="anonymous" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="http://bit.ly/ghfavicon" width=32px>
+    <script src="js/favicon.js"></script>
 </head>
 <body>
+<canvas id="cvl" width=16 height=16></canvas>
 <header id="preloader">
     <div aria-busy="true" aria-label="Loading, please wait." role="progressbar"></div>
 </header>
+<button id=lbtn>Load</button>
 <div class="repos" id="js-gh">
     <div class="repo">
         <a class="name" href="https://habr.com/ru/post/465623/">Раскрывающиеся виджеты</a>
@@ -93,9 +97,9 @@
 
         setTimeout(loop, 50);
     }
-
     loop();
     document.querySelectorAll("#preloader")[0].style = "display:none";
 </script>
+
 </body>
 </html>
