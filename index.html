@@ -1,105 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Needful on GitHub</title>
-    <link crossorigin="anonymous" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,700">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Превратите уездный город в столицу земного шара - клуб четырех коней</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png">	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/favicon.js"></script>
-	<link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
-    <script src="js/load.js"></script>
+    <link rel="stylesheet" href="css/animation.css">
 </head>
 <body>
-<canvas id="cvl" width=16 height=16></canvas>
-<header id="preloader">
-    <div aria-busy="true" aria-label="Loading, please wait." role="progressbar"></div>
-</header>
-<div class="repos" id="js-gh">
-    <div class="repo">
-        <a class="name" href="https://habr.com/ru/post/465623/">Раскрывающиеся виджеты</a>
-        <p class="desc">Аккордеон, faq, спойлер и другие раскрывающиеся виджеты (habr) [RU]</p>
-        <p class="info">
-            <span class="lang">CSS,JavaScript,HTML</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://habr.com/ru/company/ruvds/blog/464127/">Анимированный фавикон</a>
-        <p class="desc">Создание анимированных фавиконок. Прити Сэм в переводе на Хабре собирает фавиконку с анимацией загрузки с помощью Canvas, JavaScript и геометрии</p>
-        <p class="info">
-            <span class="lang">CSS,JavaScript,HTML</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://www.youtube.com/watch?v=8n8_liL3kkU">Стилизация форм на HTML и CSS</a>
-        <p class="desc">Стилизация форм на HTML и CSS</p>
-        <p class="info">
-            <span class="lang">HTML,CSS</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://css-tricks.com/building-a-conference-schedule-with-css-grid/">Демонстрация того, как сделать раписание конференции на гридах.</a>
-        <p class="desc">Демонстрация того, как сделать раписание конференции на гридах.</p>
-        <p class="info">
-            <span class="lang">HTML,CSS</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://vk.com/wall-78554274_17330">Как создать интересные эффекты на страницах сайта</a>
-        <p class="desc">1. Галерея для изображений на jQuery плагине Fancybox 3.
-            2. Карусель. Подключаем с помощью Owl carousel 2.
-            3. Эффект тени с градиентом для кнопок в меню на CSS и HTML.
-            4. Эффект размытия и фокуса при наведении на объект в CSS.</p>
-        <p class="info">
-            <span class="lang">HTML,CSS,JAVASCRIPT</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://vk.com/@haccking1-kak-perehvatit-dannye-cherez-wifi-set">Как перехватить данные через WIFI сеть</a>
-        <p class="desc"></p>
-        <p class="info">
-            <span class="lang">SOCIAL ENGINE</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://tproger.ru/translations/flex-properties-on-css/">Анимированное руководство по CSS flex (tproger) [RU]</a>
-        <p class="desc"></p>
-        <p class="info">
-            <span class="lang">HTML</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://tobiasahlin.com/blog/common-flexbox-patterns/">Распространённые раскладки на флексах с примерами кода.</a>
-        <p class="desc"></p>
-        <p class="info">
-            <span class="lang">HTML,CSS</span>
-        </p>
-    </div>
-    <div class="repo">
-        <a class="name" href="https://vc.ru/dev/81775-animaciya-ssylok-v-stroke-brauzera-s-pomoshchyu-javascript-i-emodzi">Анимация ссылок в строке браузера</a>
-        <p class="desc"></p>
-        <p class="info">
-            <span class="lang">JAVASCRIPT</span>
-        </p>
-    </div>
-</div>
-<script>
-    function loop() {
-        var i, n, s = '';
+    <header id="header" class="header animate-exit-scale-in">
+        <div class="header-background"></div>
+        <div class="top-panel">
+            <div class="container">
+                <div class="logo-wrapper">
+                    <a href="index.html"><img class="logo" src="images/logo.svg" alt="Логотип четыре коня"></a>
+                </div>
+            </div>
+        </div>
+        <div class="chess-wrapper">
+            <img class="pawn" src="images/pawn.webp" alt="Фигура пешка">
+            <img class="knight" src="images/knight.webp" alt="Фигура конь">
+        </div>
+        <div class="header-content display-flex flex-justify-center flex-align-center">
+            <div class="container">
+                <div class="header-text">
+                    <h1 class="header-title text-uppercase mb-2">
+                        <span>Превратите</span>
+                        <span>уездный город</span>
+                        <span class="text-center">в столицу</span>
+                        <span class="text-right">земного шара</span>
+                    </h1>
+                    <h2 class="header-subtitle text-family-body text-center mb-2">Оплатите взнос на телеграммы для
+                        организации Международного васюкинского турнира по шахматам</h2>
+                    <div class="btn-wrapper">
+                        <a class="button button-main" href="#section-players">Поддержать <span>шахматную
+                                мысль</span></a>
+                        <a class="button button-second" href="#section-about">Подробнее <span>о турнире</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="marquee-wrapper back-color-second">
+            <p class="text-color-white text-family-header text-uppercase marquee" data-content=" • Дело помощи утопающим — дело рук самих утопающих! • Шахматы двигают вперед не только культуру, но и экономику! • Лед тронулся, господа присяжные заседатели! "> • Дело помощи утопающим — дело рук самих утопающих! • Шахматы двигают вперед не только культуру, но и экономику! • Лед тронулся, господа присяжные заседатели!</p>
+        </section>
+        <section id="section-about" class="section section-about">
+            <div class="container">
+                <div class="display-flex flex-align-center flex-justify-spacebetween flex-gap-1rem flex-wrap mb-2">
+                    <div class="column-first animate-entry-opacity">
+                        <h3 class="special-title text-uppercase">Чтобы поддержать Международный васюкинский турнир</h3>
+                        <img class="players image-mobile mt-1 mb-1 animate-entry-scale-in" src="images/players.webp" alt="Игроки на шахматном турнире">
+                        <h3 class="special-title text-uppercase">Посетите лекцию на тему: <br><span class="text-color-red"><b>«Плодотворная дебютная идея»</b></span></h3>
+                    </div>
+                    <div class="column-second animate-entry-scale-in">
+                        <img class="players image-desktop" src="images/players.webp" alt="Игроки на шахматном турнире">
+                    </div>
+                </div>
 
-        for (i = 0; i < 10; i++) {
-            n = Math.floor(Math.sin((Date.now()/200) + (i/2)) * 4) + 4;
+                <div class="display-flex flex-align-stretch flex-justify-start flex-gap-2rem flex-wrap">
+                    <div class="column-small position-relative animate-entry-scale-in">
+                        <div class="collage-desktop"></div>
+                        <img class="collage image-mobile" src="images/collage.webp" alt="Коллаж">
+                    </div>
+                    <div class="column-big">
+                        <h3 class="special-title text-uppercase animate-entry-opacity">и Сеанс <span class="text-color-red"><b>одновременной игры в шахматы на 160 досках</b></span> гроссмейстера О. Бендера</h3>
+                        <div class="table-wrapper mt-2 mb-2 animate-entry-opacity">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Место проведения:</td>
+                                        <td>Клуб «Картонажник»</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Дата и время мероприятия:</td>
+                                        <td>22 июня 1927 г. в 18:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Стоимость входных билетов:</td>
+                                        <td>20 коп.</td>
+                                    </tr>
+                                    <tr class="inline">
+                                        <td>Плата за игру:</td>
+                                        <td>50 коп.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Взнос на телеграммы:</td>
+                                        <td><s>100 руб.</s> 21 руб. 16 коп.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="animate-entry-opacity">
+                            <a href="#">По всем вопросам обращаться в администрацию к К. Михельсону</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            s += String.fromCharCode(0x2581 + n);
-        }
+        <section id="section-steps" class="section section-steps">
+            <div class="container">
+                <h3 class="section-title-big text-uppercase animate-entry-to-right">Этапы преображения <br>Васюков</h3>
+                <p class="strange-subtitle animate-entry-to-left"><a href="#">Будущие источники <span>обогащения васюкинцев</span></a></p>
+                <div class="steps-slider mt-4">
+                    <div class="steps-system">
+                        <div class="step animate-entry-scale-in"><span class="num">1.</span> Строительство железнодорожной магистрали Москва-Васюки</div>
+                        <div class="step animate-entry-scale-in"><span class="num">2.</span> Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
+                        <div class="step animate-entry-scale-in"><span class="num">3.</span> Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</div>
+                        <div class="step animate-entry-scale-in"><span class="num">4.</span> Строительство дворца для турнира</div>
+                        <div class="step animate-entry-scale-in"><span class="num">5.</span> Размещение гаражей для гостевого автотранспорта</div>
+                        <div class="step animate-entry-scale-in"><span class="num">6.</span> Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</div>
+                        <div class="step animate-entry-scale-in"><span class="num">7.</span> Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</div>
+                    </div>
 
-        window.location.hash = s;
+                    <div class="navigation slider-switchers">
+                        <button id="steps-prev" class="switch switch-prev"></button>
+                        <div class="switch-bullet"><i class="active"></i><i></i><i></i><i></i><i></i></div>
+                        <button id="steps-next" class="switch  switch-next"></button>
+                    </div>
 
-        setTimeout(loop, 50);
-    }
-    loop();
-    document.querySelectorAll("#preloader")[0].style = "display:none";
-</script>
-<script href="js/load.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-players" class="section section-players">
+            <div class="container">
+                <h3 class="section-title-big text-uppercase members-title animate-entry-to-right">
+                    Участники турнира
+                </h3>
+                <div id="members-wrapper" class="slider-wrapper animate-entry-scale-in">
+                    <div class="switcher slider-switchers">
+                        <button id="members-prev" class="switch switch-prev"></button>
+                        <div class="switch-info"><span class="current">3</span> / <span class="total">6</span></div>
+                        <button id="members-next" class="switch  switch-next"></button>
+                    </div>
+                    <div id="cards-group" class="cards-group slides-group">
+                        <template id="card-template">
+                            <div class="card slide-item">
+                                <img src="" alt="" class="card-photo">
+                                <h4 class="card-name"></h4>
+                                <p class="card-desc"></p>
+                                <a class="card-button" href="#">Подробнее</a>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="marquee-wrapper back-color-second">
+            <p class="text-color-white text-family-header text-uppercase marquee" data-content=" • Дело помощи утопающим — дело рук самих утопающих! • Шахматы двигают вперед не только культуру, но и экономику! • Лед тронулся, господа присяжные заседатели! "> • Дело помощи утопающим — дело рук самих утопающих! • Шахматы двигают вперед не только культуру, но и экономику! • Лед тронулся,господа присяжные заседатели!</p>
+		</section>
+    </main>
+    <footer>
+        <div class="container">
+            <p class="mb-0">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
